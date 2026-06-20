@@ -27,7 +27,7 @@ This project cleans and validates that dataset, documents every issue found, app
 4. **Duplicates** — removed 20 exact full-row duplicates (kept first occurrence); flagged (but did **not** delete) 24 records belonging to 12 `order_id` groups with genuinely conflicting data.
 5. **Calculated columns** — added `cleaned_discount`, `calculated_sales`, `calculated_profit`, `profit_margin`, `shipping_delay_days`, `order_month`, `order_year`, and `data_quality_flag` (clean / warning / invalid), all built as live Excel formulas.
 
-Full detail is in [`outputs/cleaning_log.md`](outputs/cleaning_log.md).
+Full detail is in [`outputs/cleaning_log.md`]
 
 ## Business Rules Applied
 
@@ -51,7 +51,7 @@ Full detail is in [`outputs/cleaning_log.md`](outputs/cleaning_log.md).
 - 59 records where the original `sales` value didn't match the recalculated sales (mostly explained by the invalid discounts above)
 - **Final record classification:** 776 clean, 63 warning, 73 invalid (out of 912 cleaned records)
 
-Full breakdown is in [`outputs/data_quality_report.xlsx`](outputs/data_quality_report.xlsx).
+Full breakdown is in [`outputs/data_quality_report.xlsx`]
 
 ## Summary of Final Pivot Reports
 
@@ -79,34 +79,8 @@ Full breakdown is in [`outputs/data_quality_report.xlsx`](outputs/data_quality_r
 - Conflicting duplicate order_id records were flagged for manual business review rather than auto-resolved, since there is no reliable way to determine the "correct" version without more context.
 - Date parsing covers the four formats observed in this dataset; other formats would need additional logic.
 
-Full list in [`outputs/cleaning_log.md`](outputs/cleaning_log.md), Section 7.
-
-## Repository Structure
-
-```
-part1_data_cleaning/
-├── data/
-│   ├── raw_orders.xlsx          # original, unmodified
-│   └── cleaned_orders.xlsx      # cleaned + calculated columns (formula-driven)
-├── outputs/
-│   ├── data_quality_report.xlsx
-│   ├── pivot_summary.xlsx
-│   └── cleaning_log.md
-├── screenshots/
-│   ├── raw_data_preview.png
-│   ├── cleaned_data_preview.png
-│   ├── pivot_summary_1.png
-│   └── pivot_summary_2.png
-└── README.md
-```
-
-## Screenshots
-
-| File | Shows |
-|---|---|
-| `screenshots/raw_data_preview.png` | Raw dataset before cleaning |
 | `screenshots/cleaned_data_preview.png` | Cleaned dataset with calculated columns |
 | `screenshots/pivot_summary_1.png` | Sales & Profit by Region pivot |
 | `screenshots/pivot_summary_2.png` | Profit Margin by Customer Segment pivot |
 
-*(Screenshots to be added locally after opening the files in Excel — see note below.)*
+
