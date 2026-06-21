@@ -79,8 +79,5 @@ Full breakdown is in [`outputs/data_quality_report.xlsx`]
 - Conflicting duplicate order_id records were flagged for manual business review rather than auto-resolved, since there is no reliable way to determine the "correct" version without more context.
 - Date parsing covers the four formats observed in this dataset; other formats would need additional logic.
 
-| `screenshots/cleaned_data_preview.png` | Cleaned dataset with calculated columns |
-| `screenshots/pivot_summary_1.png` | Sales & Profit by Region pivot |
-| `screenshots/pivot_summary_2.png` | Profit Margin by Customer Segment pivot |
 
 
